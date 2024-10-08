@@ -1,0 +1,830 @@
+{
+  "Uuid": "1da1d0ef-0480-4148-9491-297eb361b3f3",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Line Corner Genrator",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 713,
+      "SelectedString": "OST_Cornices",
+      "NodeType": "ExtensionNode",
+      "Id": "b6c41971842e46f8a504782268c6e7ed",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "413d8e3d9de04ecc9d2b32d1d4c60dfe",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "40d9830a39b54c21aa5116ad1a4f0888",
+      "Inputs": [
+        {
+          "Id": "13b7b247effa4ee880c99178b0b4aaeb",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ea5b53bc5e964a0fba1c2ccb5d02e8a7",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "38d2b003-a570-4fc4-9836-4e10befcd4fc",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "81d64cdb1cec48c69c355d757072aba1",
+      "Inputs": [
+        {
+          "Id": "a3ebcc66d11b4666bc5a15963d77c093",
+          "Name": "element1",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b598a7894ec2417ba25e1cc48f7fd30c",
+          "Name": "element2",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ae0249e2247c4d488d5035503174e322",
+          "Name": "success",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7bcbb592c5b9400daaf6153714aa46ff",
+          "Name": "element1",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a4cc18f08dc94fae9bb0858db8ed40cb",
+          "Name": "element2",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "Joins two model elements (if possible). Only works inside the project environment."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 700,
+      "SelectedString": "OST_Walls",
+      "NodeType": "ExtensionNode",
+      "Id": "4912eadecdd24ce0a572487464fad140",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2c3a2c8b3d404de3ba6f4a5668d23156",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 121,
+      "SelectedString": "OST_Ceilings",
+      "NodeType": "ExtensionNode",
+      "Id": "1de7fca2c0184eacac1c6eda4bc4060d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "343956ee846d4133a0b2c1290f20ef67",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "bc8deb0d89354187909a4fa5c1aea1a1",
+      "Inputs": [
+        {
+          "Id": "f32e295a3c7a432cac006210b97ed4d8",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "81127281f84f4858872ddd8f1b7dba57",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 480,
+      "SelectedString": "OST_Roofs",
+      "NodeType": "ExtensionNode",
+      "Id": "0624b9671ed940d8b7ac458dda9e4d38",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9f77c64875ab493e8513bd986372852b",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 700,
+      "SelectedString": "OST_Walls",
+      "NodeType": "ExtensionNode",
+      "Id": "e549b68b378b4efb9eada3b23126f6f7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "633e56dbdf3b42e4aa847e83f9acc633",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 491,
+      "SelectedString": "OST_RoofSoffit",
+      "NodeType": "ExtensionNode",
+      "Id": "4b46457e90684c13b7a62f7e942a02f6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ca8b120991a5448c9e593fb1865e1fc7",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "93e501158ee74be490d15076479e5c88",
+      "Inputs": [
+        {
+          "Id": "3a017d5a09454dc3b23e4d97e4b20c71",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dade70012fe9451081758c1d7a36c246",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "a1ffa9a3f33c48b78f6f8834f715087a",
+      "Inputs": [
+        {
+          "Id": "4460f159498d41dd8c6c5834bf5b04bd",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eaab8201884a40d9a76c7b491e33d9bf",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "ce296174aa0c46db889b3e0dc848c97f",
+      "Inputs": [
+        {
+          "Id": "16c1721796f547eab8d7d28056bcfd65",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3066fac70d144bfea01d3220016f6c91",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "53483a3cf9714bd98dc608146483d929",
+      "Inputs": [
+        {
+          "Id": "e44135091f184a238666c827bb306f6e",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d6971607801343638fe39b1838ee7281",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "56e86131c659423391a13f072dff1f48",
+          "Name": "item2",
+          "Description": "Item Index #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cb44e52b4a9443ff9c7a51f5b368a15b",
+          "Name": "list",
+          "Description": "A list (type: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list out of the given inputs"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "f54b1d539a9548a0bd321c4c25ce0106",
+      "Inputs": [
+        {
+          "Id": "3e60cad3fa6240b4a0741a39824cbb62",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "94fac56a15804440a17357812a161bcd",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "38d2b003-a570-4fc4-9836-4e10befcd4fc",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "470238123bd7460ea138af4b70276765",
+      "Inputs": [
+        {
+          "Id": "696bc865201845f4bd646a9bad77a742",
+          "Name": "element1",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bdbc4d0253114cb4809aedc9df56ad6e",
+          "Name": "element2",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "25685ff155a94740992d731c4b2c5d0c",
+          "Name": "success",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "91314c2003234e349ae1136703140909",
+          "Name": "element1",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "70ad1909b37b4ec6a729df12220a14f3",
+          "Name": "element2",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "Joins two model elements (if possible). Only works inside the project environment."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "413d8e3d9de04ecc9d2b32d1d4c60dfe",
+      "End": "13b7b247effa4ee880c99178b0b4aaeb",
+      "Id": "6072956992714bc9a56e5166297d17e9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ea5b53bc5e964a0fba1c2ccb5d02e8a7",
+      "End": "a3ebcc66d11b4666bc5a15963d77c093",
+      "Id": "eeaac70298fb49f88f31a30e5af5cb75",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2c3a2c8b3d404de3ba6f4a5668d23156",
+      "End": "f32e295a3c7a432cac006210b97ed4d8",
+      "Id": "a56593ff08a5459591b377449b750ff4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "343956ee846d4133a0b2c1290f20ef67",
+      "End": "4460f159498d41dd8c6c5834bf5b04bd",
+      "Id": "71fa35d6bd9145a2a63086611c4ca7a2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "81127281f84f4858872ddd8f1b7dba57",
+      "End": "b598a7894ec2417ba25e1cc48f7fd30c",
+      "Id": "ad6bc9c73532428cbb3b00045078c204",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9f77c64875ab493e8513bd986372852b",
+      "End": "16c1721796f547eab8d7d28056bcfd65",
+      "Id": "db49bddc7b94467fbc372d47d6176780",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "633e56dbdf3b42e4aa847e83f9acc633",
+      "End": "3e60cad3fa6240b4a0741a39824cbb62",
+      "Id": "9cc6d335ad59448d91ef236aa95b11df",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ca8b120991a5448c9e593fb1865e1fc7",
+      "End": "3a017d5a09454dc3b23e4d97e4b20c71",
+      "Id": "235ab802f5be4f4fbf61803d2f155bdf",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "dade70012fe9451081758c1d7a36c246",
+      "End": "e44135091f184a238666c827bb306f6e",
+      "Id": "635a91a83f654d89b712c847e86f1300",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "eaab8201884a40d9a76c7b491e33d9bf",
+      "End": "56e86131c659423391a13f072dff1f48",
+      "Id": "67c0453a86e24a04990c1085206935bf",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3066fac70d144bfea01d3220016f6c91",
+      "End": "d6971607801343638fe39b1838ee7281",
+      "Id": "0baa146b225c4c5faf9dfcd31498334b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cb44e52b4a9443ff9c7a51f5b368a15b",
+      "End": "bdbc4d0253114cb4809aedc9df56ad6e",
+      "Id": "5e643c87fe294275bbddbf86ebe58019",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "94fac56a15804440a17357812a161bcd",
+      "End": "696bc865201845f4bd646a9bad77a742",
+      "Id": "67c30fdcd9a9469fb98134b3a7239da6",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [
+    "38d2b003-a570-4fc4-9836-4e10befcd4fc"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Clockwork for Dynamo 2.x",
+      "Version": "2.6.0",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "81d64cdb1cec48c69c355d757072aba1",
+        "470238123bd7460ea138af4b70276765"
+      ]
+    }
+  ],
+  "Thumbnail": "/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/wAALCADhAOEBAREA/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oACAEBAAA/AP1TooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooqC+vINOs57q5mS3toUaWWaVgqoqgksSegABNfl98Wf8Agr14s1rx3e+H/gd4At/ElnauypqGoW1xdy3aq2DJHBAylY/QsSTnkDpXIf8ADzb9rT/ojmnf+Etqn/x+j/h5t+1p/wBEc07/AMJbVP8A4/R/w82/a0/6I5p3/hLap/8AH6P+Hm37Wn/RHNO/8JbVP/j9KP8Agpr+1p3+DunD/uVtU/8Aj1e4/sk/8FTl+LHxEs/h38U/Ddv4L8U30wtbK7tfMjtpLg4CwSRykvE7E4XJIJIHBIz+glLRRRRRRRRRSE7Rk15x43/aS+Ffw11g6T4q+Ifhrw/qajc1nf6nFFMo90LZH4iud/4bU+A3/RXvB3/g4h/+Ko/4bU+A3/RXvB3/AIOIf/iqP+G1PgN/0V7wd/4OIf8A4qj/AIbU+A3/AEV7wd/4OIf/AIqj/htT4Df9Fe8Hf+DiH/4qj/htT4Df9Fe8Hf8Ag4h/+Ko/4bU+A3/RXvB3/g4h/wDiqP8AhtT4Df8ARXvB3/g4h/8Aiq8m/a0/a++E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",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.2.5624",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -308.95388793945313,
+      "EyeY": 54.426723480224609,
+      "EyeZ": -74.322036743164063,
+      "LookX": 1.1922607421875,
+      "LookY": -1.2916183471679688,
+      "LookZ": -5.7626113891601563,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "b6c41971842e46f8a504782268c6e7ed",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1586.9169095002253,
+        "Y": -1405.3041494699892
+      },
+      {
+        "Id": "40d9830a39b54c21aa5116ad1a4f0888",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 2027.4299952743252,
+        "Y": -1403.8576920025694
+      },
+      {
+        "Id": "81d64cdb1cec48c69c355d757072aba1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Element.JoinGeometry",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 2589.2056443698852,
+        "Y": -1383.3466580131592
+      },
+      {
+        "Id": "4912eadecdd24ce0a572487464fad140",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1505.2764999427552,
+        "Y": -1165.2599091380994
+      },
+      {
+        "Id": "1de7fca2c0184eacac1c6eda4bc4060d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1428.8024003985468,
+        "Y": -401.93914268108779
+      },
+      {
+        "Id": "bc8deb0d89354187909a4fa5c1aea1a1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1993.8655091103451,
+        "Y": -1027.6497233861392
+      },
+      {
+        "Id": "0624b9671ed940d8b7ac458dda9e4d38",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1402.3869014339966,
+        "Y": -592.88546376768977
+      },
+      {
+        "Id": "e549b68b378b4efb9eada3b23126f6f7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1450.9192698645766,
+        "Y": -218.13971514403579
+      },
+      {
+        "Id": "4b46457e90684c13b7a62f7e942a02f6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1436.5610498791966,
+        "Y": -781.11803200823988
+      },
+      {
+        "Id": "93e501158ee74be490d15076479e5c88",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1864.1410834976866,
+        "Y": -754.02652245289983
+      },
+      {
+        "Id": "a1ffa9a3f33c48b78f6f8834f715087a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1826.3364617433067,
+        "Y": -456.90265477716082
+      },
+      {
+        "Id": "ce296174aa0c46db889b3e0dc848c97f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1841.3905301244067,
+        "Y": -612.57140547190988
+      },
+      {
+        "Id": "53483a3cf9714bd98dc608146483d929",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "List Create",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 2322.3839320838183,
+        "Y": -633.58104825637724
+      },
+      {
+        "Id": "f54b1d539a9548a0bd321c4c25ce0106",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1870.4959838153366,
+        "Y": -227.35405546638481
+      },
+      {
+        "Id": "470238123bd7460ea138af4b70276765",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Element.JoinGeometry",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 2713.8046334799697,
+        "Y": -529.50559259510464
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "ebf4adf548e44473a4ebd85ab346778e",
+        "Title": "Elements Join ",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "1de7fca2c0184eacac1c6eda4bc4060d",
+          "0624b9671ed940d8b7ac458dda9e4d38",
+          "e549b68b378b4efb9eada3b23126f6f7",
+          "4b46457e90684c13b7a62f7e942a02f6",
+          "93e501158ee74be490d15076479e5c88",
+          "a1ffa9a3f33c48b78f6f8834f715087a",
+          "ce296174aa0c46db889b3e0dc848c97f",
+          "53483a3cf9714bd98dc608146483d929",
+          "f54b1d539a9548a0bd321c4c25ce0106",
+          "470238123bd7460ea138af4b70276765"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1392.3869014339966,
+        "Top": -854.11803200823988,
+        "Width": 1575.417732045973,
+        "Height": 767.97831686420409,
+        "FontSize": 36.0,
+        "InitialTop": -781.11803200823988,
+        "InitialHeight": 707.97831686420409,
+        "TextblockHeight": 63.0,
+        "Background": "#FFBB87C6"
+      },
+      {
+        "Id": "082b26393ef0492386fa962ffbb1ff32",
+        "Title": "Wall Sweep Join",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "b6c41971842e46f8a504782268c6e7ed",
+          "40d9830a39b54c21aa5116ad1a4f0888",
+          "81d64cdb1cec48c69c355d757072aba1",
+          "4912eadecdd24ce0a572487464fad140",
+          "bc8deb0d89354187909a4fa5c1aea1a1"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1495.2764999427552,
+        "Top": -1478.3041494699892,
+        "Width": 1347.92914442713,
+        "Height": 582.65442608385,
+        "FontSize": 36.0,
+        "InitialTop": -1405.3041494699892,
+        "InitialHeight": 522.65442608385,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFF7BAC"
+      }
+    ],
+    "X": -394.93644133302234,
+    "Y": 841.25071543664023,
+    "Zoom": 0.33839423761396709
+  }
+}
